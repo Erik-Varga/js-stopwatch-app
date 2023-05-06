@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600;1,700&family=Poppins&family=Quicksand&family=Raleway&family=Roboto&display=swap');
+
+
+:root {
+  --font: 'Roboto';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font), sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  background: #2f363e;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.timer-Display {
+  font-size: 3rem;
+}
+
+.action {
+  display: grid;
+  margin: 20px auto 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btns button {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+  border: 4px solid rgba(255, 255, 0, 0.644);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btns button:hover {
+  transition: all 0.3 ease;
+  background-color: #508052;
+  z-index: 1;
+}
+
+#pauseTimer:hover,
+#restartTimer:hover
+{
+  background-color: #2061d9;
+}
+
+#resetTimer:hover,
+#resetLaps:hover
+{
+  background-color: #d92027;
+}
+
+.laps {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: yellow;
+}
+
+.clock {
+
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  border: 4px solid #091921;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+              inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+              e 15px 15px rgba(0, 0, 0, 0.3),
+              inset 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.clock:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+
+.clock .hour,
+.hr {
+  width: 160px;
+  height: 160px;
+}
+
+.clock .min,
+.mn {
+  width: 190px;
+  height: 190px;
+}
+
+.clock .sec,
+.sc {
+  width: 230px;
+  height: 230px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background-color: #ff105e;
+  border-radius: 6px 6px 0 0;
+  z-index: 10;
+}
+
+
+.mn:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 6px 6px 0 0;
+  z-index: 11;
+}
+
+.sc:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 6px 6px 0 0;
+  z-index: 12;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btns .toggle {
+  transition: all 0.3 ease;
+  background-color: #508052;
+  z-index: 1;
+}
+
+.btns .reset:active,
+.btns .toggle:active,
+.btns .lap:active {
+  transform: scale(0.9);
+}
+
+.btns .toggle.on {
+  background-color: #d92027;
+}
+
+.btns .reset,
+.btns .lap {
+  transition: all 0.3s ease;
+}
+
+.lap_box {
+  width: 200px;
+  height: auto;
+  padding-left: 30px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lapItem {
+  width: 120px;
+}
+
+footer {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+
+footer a {
+  color: rgba(0, 0, 0, 0.8);
+	text-decoration: none;
+  color: whitesmoke;
+}
+
+footer a:hover {
+  filter: brightness(110%);
+	transition: 0.3s;
+  color: darkgray;
+}
